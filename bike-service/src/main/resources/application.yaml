@@ -1,0 +1,18 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: bike-sevice
+  h2:
+    console:
+      path: '/h2-console'
+      enabled: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

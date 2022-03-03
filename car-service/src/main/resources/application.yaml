@@ -1,0 +1,18 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: car-sevice
+  h2:
+    console:
+      path: '/h2-console'
+      enabled: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
