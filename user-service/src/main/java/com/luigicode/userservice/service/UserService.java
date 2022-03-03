@@ -42,12 +42,12 @@ public class UserService {
     }
 
     public List<Object> getCars(int userId){
-        String URL = "http://localhost:8002/cars/byuser/"+userId;
+        String URL = "http://car-service/cars/byuser/"+userId;
         return restTemplate.getForObject(URL, List.class);
     }
 
     public List<Bike> getBikes(int userId){
-        String URL = "http://localhost:8003/bikes/byuser/"+userId;
+        String URL = "http://bike-service/bikes/byuser/"+userId;
         return restTemplate.getForObject(URL, List.class);
     }
 

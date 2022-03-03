@@ -12,7 +12,6 @@ import java.util.List;
 
 @FeignClient(
         name = "bike-service",
-        url = "http://localhost:8003",
         path = "/bikes")
 public interface BikeFeignClient {
     @PostMapping("")
