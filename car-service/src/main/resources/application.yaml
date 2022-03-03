@@ -1,8 +1,4 @@
-server:
-  port: 8002
 spring:
-  application:
-    name: car-sevice
   h2:
     console:
       path: '/h2-console'

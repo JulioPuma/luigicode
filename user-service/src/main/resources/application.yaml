@@ -1,8 +1,4 @@
-server:
-  port: 8001
 spring:
-  application:
-    name: user-sevice
   h2:
     console:
       path: '/h2-console'
