@@ -17,19 +17,28 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
 	</properties>
+
+
 	<dependencies>
+		<!-- CONFIG CLIENT: Conectar al config server-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
+
+		<!-- BOOTSTRAP YAML-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
+
+		<!-- EUREKA SERVER -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,6 +46,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
