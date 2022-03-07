@@ -94,29 +94,24 @@ public class UserController {
     }
 
 
-    public ResponseEntity<List<Object>> fallBackGetCars(@PathVariable("userId") int userId, RuntimeException e) {
+    private ResponseEntity<List<Object>> fallBackGetCars(@PathVariable("userId") int userId, RuntimeException e) {
         return new ResponseEntity("El usuario " + userId + " tiene los coches en el taller", HttpStatus.OK);
     }
 
-    public ResponseEntity<Object> fallBackSaveCar(
-            @PathVariable("userId") int userId,
-            @RequestBody Car car, RuntimeException e) {
+    private ResponseEntity<Object> fallBackSaveCar(@PathVariable("userId") int userId, @RequestBody Car car, RuntimeException e) {
         return new ResponseEntity("El usuario " + userId + " no tiene dinero pra coches", HttpStatus.OK);
     }
 
 
-    public ResponseEntity<List<Bike>> fallBackGetBikes(@PathVariable("userId") int userId, RuntimeException e) {
+    private ResponseEntity<List<Bike>> fallBackGetBikes(@PathVariable("userId") int userId, RuntimeException e) {
         return new ResponseEntity("El usuario " + userId + " tiene las motos en el taller", HttpStatus.OK);
     }
 
-    public ResponseEntity<Bike> fallBackSaveBike(
-            @PathVariable("userId") int userId,
-            @RequestBody Bike bike,
-            RuntimeException e) {
+    private ResponseEntity<Bike> fallBackSaveBike(@PathVariable("userId") int userId, @RequestBody Bike bike, RuntimeException e) {
         return new ResponseEntity("El usuario " + userId + " no tiene dinero para motos", HttpStatus.OK);
     }
 
-    public ResponseEntity<Map<String, Object>> fallBackGetAll(@PathVariable("userId") int userId){
+    private ResponseEntity<Map<String, Object>> fallBackGetAll(@PathVariable("userId") int userId, RuntimeException e){
         return new ResponseEntity("El usuario " + userId + " tiene los vehiculos en el taller", HttpStatus.OK);
 
     }
